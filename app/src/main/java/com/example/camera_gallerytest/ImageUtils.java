@@ -79,22 +79,23 @@ public class ImageUtils {
 
     public static Bitmap processBitmap(Bitmap source,int size){
 
-        int image_height = source.getHeight();
-        int image_width = source.getWidth();
+        //int image_height = source.getHeight();
+        //int image_width = source.getWidth();
 
-        Bitmap croppedBitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
+        //Bitmap croppedBitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
 
-        Matrix frameToCropTransformations = getTransformationMatrix(image_width,image_height,size,size,0,false);
-        Matrix cropToFrameTransformations = new Matrix();
-        frameToCropTransformations.invert(cropToFrameTransformations);
+        //Matrix frameToCropTransformations = getTransformationMatrix(image_width,image_height,size,size,0,false);
+        //Matrix cropToFrameTransformations = new Matrix();
+        //frameToCropTransformations.invert(cropToFrameTransformations);
 
-        final Canvas canvas = new Canvas(croppedBitmap);
-        canvas.drawBitmap(source, frameToCropTransformations, null);
+        //final Canvas canvas = new Canvas(croppedBitmap);
+        //canvas.drawBitmap(source, frameToCropTransformations, null);
         /*
         ALTERNATIVE CODE
+        */
 
         Bitmap croppedBitmap = Bitmap.createScaledBitmap(source, size, size, false);
-         */
+
 
         return croppedBitmap;
 
